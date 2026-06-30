@@ -1,0 +1,23 @@
+# DepBlast GitHub App Manifest
+# This file defines the permissions and events the app needs.
+# Use this to register the app at: https://github.com/settings/apps/new
+
+name: depblast
+description: "Scans new npm dependencies in PRs for blast radius: transitive deps, license conflicts, bundle size, security advisories, and maintainer health."
+url: "https://github.com/MRL-00/depblast"
+
+# Repository access
+default_events:
+  - pull_request
+
+default_permissions:
+  # Read code to get package.json and diff
+  contents: read
+  # Post comments on PRs and read existing comments
+  issues: write
+  # Create check runs for richer reporting
+  checks: write
+  # Read pull request metadata
+  pull_requests: read
+  # Read repository metadata
+  metadata: read
